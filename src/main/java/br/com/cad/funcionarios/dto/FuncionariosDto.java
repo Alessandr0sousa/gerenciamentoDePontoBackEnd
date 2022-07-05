@@ -1,12 +1,10 @@
 package br.com.cad.funcionarios.dto;
 
-import br.com.cad.funcionarios.model.Cargos;
 import br.com.cad.funcionarios.model.NivelHierarquico;
-import br.com.cad.funcionarios.model.Pessoas;
-import lombok.*;
-
-import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.Setter;
 
 @Getter
 @Setter

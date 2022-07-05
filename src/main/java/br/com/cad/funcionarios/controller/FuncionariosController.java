@@ -18,7 +18,7 @@ public class FuncionariosController {
     private FuncionariosService funcionariosService;
 
     @PostMapping
-    public ResponseEntity<Funcionarios> cadastrarFuncionario(@RequestBody(required = true) @Valid FuncionariosDto dto, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<Funcionarios> cadastrarFuncionario(@RequestBody @Valid FuncionariosDto dto, UriComponentsBuilder uriBuilder) {
         return funcionariosService.cadastrar(dto, uriBuilder);
 
     }
@@ -28,7 +28,7 @@ public class FuncionariosController {
         return funcionariosService.buscar(null);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<List<Funcionarios>> listarFuncionarioId(@PathVariable(required = false) Long id) {
         return funcionariosService.buscar(id);
     }

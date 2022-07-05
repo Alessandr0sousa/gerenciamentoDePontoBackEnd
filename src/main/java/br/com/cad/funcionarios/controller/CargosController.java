@@ -19,9 +19,9 @@ public class CargosController {
     @Autowired
     private CargosService cargosService;
 
-    @PostMapping()
+    @PostMapping
     @Transactional
-    private ResponseEntity<Cargos> CadastrarCargos(@RequestBody(required = true) @Valid CargosDto dto, UriComponentsBuilder uriBuilder) {
+    private ResponseEntity<Cargos> CadastrarCargos(@RequestBody @Valid CargosDto dto, UriComponentsBuilder uriBuilder) {
         return cargosService.cadastrar(dto, uriBuilder);
     }
 
